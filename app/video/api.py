@@ -23,8 +23,6 @@ async def create_video(
         description: Optional[str] = Form(None),
         file: UploadFile = File(...),
 ) -> Optional[Video]:
-    """ Add video """
-
     # TODO: fix user identification
     user = await User.objects.first()
 
@@ -36,8 +34,8 @@ async def get_videos() -> List[Video]:
     return await Video.objects.select_related('user').all()
 
 
-@video_router.get('/index/{video_id}', response_class=HTMLResponse)
-async def get_video(request: Request, video_id: int) -> _TemplateResponse:
+@video_router.get('/video_player/{video_id}', response_class=HTMLResponse)
+async def get_video_player(request: Request, video_id: int) -> _TemplateResponse:
     return templates.TemplateResponse('index.html', {'request': request, 'path': video_id})
 
 
@@ -52,7 +50,6 @@ async def get_video_stream(request: Request, video_id: int) -> StreamingResponse
     )
 
     response.headers.update({
-        'Accept-Ranges': 'bytes',
         'Content-Length': str(content_length),
         **headers,
     })

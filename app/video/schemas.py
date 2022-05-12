@@ -13,6 +13,6 @@ class UploadVideo(BaseModel):
 class GetVideo(BaseModel):
     id: int
     title: str
-    description: str
+    description: Optional[str]
     file: str
     user: User

@@ -1,8 +1,10 @@
 from datetime import datetime, timezone
 from typing import Dict, Optional, Union
+
+from db import database, metadata
+
 import ormar
 from ormar import Model
-from db import metadata, database
 
 
 class MainMeta(ormar.ModelMeta):

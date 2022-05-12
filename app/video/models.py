@@ -2,7 +2,6 @@ from datetime import datetime, timezone
 from typing import Dict, Optional, Union
 
 from app.db import database, metadata
-
 from app.user.models import User
 
 import ormar

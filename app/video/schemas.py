@@ -1,3 +1,5 @@
+from typing import Optional
+
 from app.user.schemas import User
 
 from pydantic import BaseModel
@@ -5,7 +7,7 @@ from pydantic import BaseModel
 
 class UploadVideo(BaseModel):
     title: str
-    description: str
+    description: Optional[str]
 
 
 class GetVideo(BaseModel):

@@ -1,9 +1,6 @@
+from user.schemas import User
+
 from pydantic import BaseModel
-
-
-class User(BaseModel):
-    id: int
-    username: str
 
 
 class UploadVideo(BaseModel):

@@ -1,5 +1,6 @@
 from datetime import datetime, timezone
 from typing import Dict, Optional, Union
+from user.models import User
 
 from db import database, metadata
 
@@ -10,14 +11,6 @@ from ormar import Model
 class MainMeta(ormar.ModelMeta):
     metadata = metadata
     database = database
-
-
-class User(ormar.Model):
-    class Meta(MainMeta):
-        pass
-
-    id: int = ormar.Integer(primary_key=True)
-    username: str = ormar.String(max_length=100)
 
 
 class Video(Model):

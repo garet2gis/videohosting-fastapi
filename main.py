@@ -1,8 +1,8 @@
-from api import video_router
-
 from db import database
 
 from fastapi import FastAPI
+
+from video import api
 
 app = FastAPI()
 
@@ -24,4 +24,4 @@ async def shutdown() -> None:
         await database_.disconnect()
 
 
-app.include_router(video_router)
+app.include_router(api.video_router)

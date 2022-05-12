@@ -1,9 +1,10 @@
 import shutil
 from typing import List
+from user.models import User
 
 from fastapi import APIRouter, File, Form, UploadFile
 
-from models import User, Video
+from models import Video
 
 from schemas import GetVideo, UploadVideo
 

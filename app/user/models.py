@@ -1,4 +1,4 @@
-from db import database, metadata
+from app.db import database, metadata
 
 import ormar
 

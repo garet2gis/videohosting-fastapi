@@ -1,8 +1,7 @@
-from db import database
-
 from fastapi import FastAPI
 
-from video import api
+from .db import database
+from .video import api
 
 app = FastAPI()
 

@@ -1,4 +1,4 @@
-from user.schemas import User
+from app.user.schemas import User
 
 from pydantic import BaseModel
 

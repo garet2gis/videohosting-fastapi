@@ -1,12 +1,12 @@
 import shutil
 from typing import List
-from user.models import User
+
+from app.user.models import User
 
 from fastapi import APIRouter, File, Form, UploadFile
 
-from models import Video
-
-from schemas import GetVideo, UploadVideo
+from .models import Video
+from .schemas import GetVideo, UploadVideo
 
 video_router = APIRouter()
 

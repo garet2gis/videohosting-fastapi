@@ -1,5 +1,5 @@
 from datetime import datetime, timezone
-from typing import Optional, Union, Dict, List
+from typing import Dict, Optional, Union
 import ormar
 from ormar import Model
 from db import metadata, database
